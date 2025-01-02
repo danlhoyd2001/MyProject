@@ -1,0 +1,7 @@
+<h1>User Profiles</h1>
+<ul>
+    {% for profile in object_list %}
+    <li><a href="{{ profile.get_absolute_url }}">{{ profile.user.username }}</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'userprofile_create' %}">Create New User Profile</a>

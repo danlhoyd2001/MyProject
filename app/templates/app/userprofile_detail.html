@@ -1,0 +1,5 @@
+<h1>{{ object.user.username }}</h1>
+<p>Bio: {{ object.bio }}</p>
+<img src="{{ object.profile_picture.url }}" alt="Profile Picture">
+<a href="{% url 'userprofile_update' object.pk %}">Edit</a>
+<a href="{% url 'userprofile_delete' object.pk %}">Delete</a>
